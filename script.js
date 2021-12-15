@@ -8,3 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
       loop: true
     });
   });
+// $(document).ready(function(){
+//   let count = 0;
+//   let counter = setInterval(function(){
+//     if(count < 101){
+//       $('.count').text(count + '%');
+//       $('.loader').css('width' , count + '%');
+//       count++
+//     }
+//     else{
+//       clearInterval(counter)
+//     }
+//   }, 80)
+// })

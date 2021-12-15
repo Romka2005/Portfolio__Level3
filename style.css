@@ -57,6 +57,41 @@ body{
     max-width: 1239px;
     margin: auto;
 }
+.preloader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 1000;
+    pointer-events: none;
+    animation: fadeout .5s linear forwards;
+    animation-delay: 8.5s;
+}
+@keyframes fadeout{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+.loader{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #413e3e;
+}
+.count{
+    text-align: center;
+    font-size: 18vw;
+    color: white;
+    font-weight: 800;
+    mix-blend-mode: difference;
+}
 .home{
     width: 100%;
     background: linear-gradient(-45deg, #fffaf3, #ffd890, #ffc67b);
@@ -85,6 +120,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 1px 13px 15px 0px rgba(34, 60, 80, 0.2);
 }
 .logo{
     position: relative;
@@ -127,6 +163,7 @@ body{
     border-radius: 20px;
     font-size: 18px;
     transition: all .5s;
+    padding: 12px 20px;
 }
 .btn:hover{
     background: white;
@@ -262,30 +299,30 @@ body{
 }
 .aboutme .description{
     font-size: 24px;
-    line-height: 2;
+    line-height: 1.7;
 }
 .about__items{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 400px;
-    height: 150px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .about__item{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
 .about__items h1{
     font-size: 26px;
     font-family: 'Mitr', sans-serif; 
+}
+.about__items h2{
+    margin: 0 15px;
 }
 .about__items h3{
     font-size: 20px;
     font-family: 'Mitr', sans-serif; 
 }
 .about__button{
-    margin-top: 30px;
+    margin-top: 40px;
+    height: 50px;
 }
 .about__button a{
     font-size: 20px;
@@ -295,6 +332,7 @@ body{
     text-align: center;
     color: white;
     transition: all .5s;
+    margin-top: 20px;
 }
 .about__button a:hover{
     background: black;
@@ -853,22 +891,26 @@ input::placeholder{
         top: -100%;
         left: 0;
     }
-
+    .header__body{
+        
+    }
     .menu{
         position: fixed;
         top: -100%;
         left: 0;
         width: 100%;
-        height: 100%;
-        padding-top: 150px;
+        height: 100%;  
         transition: all 1s;
         background: white;
+        padding-top: 115px;
     }
     .menu.active {
         top: 0;
+
     }
     .header__body .btn.active{
         top: 400px;
+        
     }
     .burger.active span{
         transform: scale(0);
@@ -883,6 +925,7 @@ input::placeholder{
     }
     .header__list{
         display: block;
+        width: 100%;
     }
     .header__list li{
         margin-bottom: 20px;
@@ -903,6 +946,15 @@ input::placeholder{
     .home__content h2{
         font-size: 25px;
     }
+}
+@media (max-width:939px){
+    .aboutright{
+        width: 100%;
+    }
+    .about__button{
+        margin: 40px auto;
+    }
+
 }
 @media (max-width:500px){
     .home__content h1{
